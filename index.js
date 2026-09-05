@@ -784,9 +784,14 @@ function updateSquash(){
     squashX+=(targetSquashX-squashX)*0.12;
     squashY+=(targetSquashY-squashY)*0.12;
 }
-
+let page = document.getElementById("000");
+let unable = document.getElementById("404")
 const isMobileOrTablet = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 if (isMobileOrTablet) {
-    window.location.href = "/desktop-only.html";
+   page.classList.remove("show");
+   page.classList.add("hide");
+   unable.classList.remove("hide");
+   page.classList.add("show")
 }
+

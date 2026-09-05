@@ -246,3 +246,10 @@ h1, h2, h3, p, span {
     color: #eee;
     font-weight: bold;
 }
+
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
