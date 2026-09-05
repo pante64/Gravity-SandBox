@@ -784,3 +784,9 @@ function updateSquash(){
     squashX+=(targetSquashX-squashX)*0.12;
     squashY+=(targetSquashY-squashY)*0.12;
 }
+
+const isMobileOrTablet = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+if (isMobileOrTablet) {
+    window.location.href = "/desktop-only.html";
+}
