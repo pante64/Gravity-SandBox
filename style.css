@@ -1,0 +1,248 @@
+body {
+    margin: 0;
+    background: #111;
+    color: white;
+    font-family: Arial;
+    overflow-x: hidden;
+}
+
+#theBestUi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1500px;
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#ui {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 400px;
+    gap: 10px;
+    height: auto;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+    user-select: none;
+}
+
+#Vel, #grav, #horizontall {
+    background: #1b1b1b;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#Vel h4, #grav h4, #horizontall h4 {
+    margin: 0;
+    font-size: 12px;
+}
+
+#Vel h1, #grav h1, #horizontall h1 {
+    margin: 5px 0;
+    font-size: 22px;
+}
+
+#forceUI {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+#forces {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    max-height: 120px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+#forces::-webkit-scrollbar {
+    width: 6px;
+}
+
+#forces::-webkit-scrollbar-track {
+    background: #181818;
+}
+
+#forces::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 10px;
+}
+
+#forces::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.bloque-fuerza {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end;
+    gap: 4px;
+    width: 100%;
+}
+
+.control-rango {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 8px;
+}
+
+.titulo-fuerza {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#buttons {
+    display: flex;
+    gap: 5px;
+}
+
+button {
+    background: #222;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #333;
+}
+
+input[type="range"] {
+    accent-color: #888;
+}
+
+#canvases {
+    position: relative;
+    width: 1500px;
+    height: 700px;
+}
+
+#education, #drawing {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #333;
+}
+
+#education {
+    background: #151515;
+}
+
+#drawing {
+    background: transparent;
+    z-index: 2;
+    pointer-events: none;
+}
+
+#education {
+    z-index: 1;
+}
+
+#texts {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 20;
+    background: #181818;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #333;
+}
+
+#texts h4 {
+    margin: 3px;
+}
+
+h1, h2, h3, p, span, button, label {
+    user-select: none;
+}
+
+h1, h2, h3, p, span {
+    pointer-events: none;
+}
+
+.simuoff {
+    pointer-events: all;
+}
+
+.simon {
+    pointer-events: none;
+}
+
+.alwaysallowed {
+    pointer-events: all;
+}
+
+#guidePopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+#guideBox {
+    background: #1b1b1b;
+    border: 6px solid #333;
+    border-radius: 30px;
+    padding: 25px 35px;
+    max-width: 500px;
+    text-align: center;
+    font-family: Comic Sans MS, Comic Sans, cursive, Arial;
+    color: #eee;
+}
+
+#guideBox h1 {
+    margin-top: 0;
+    font-size: 40px;
+    color: #eee;
+}
+
+#guideBox p {
+    font-size: 18px;
+    margin: 12px 0;
+    text-align: left;
+}
+
+#guideBox button {
+    margin-top: 15px;
+    font-size: 22px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    background: #1b1b1b;
+    border: 4px solid #333;
+    color: #eee;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#guideBox button:hover {
+    background: #333;
+}
+
+#guideBtn {
+    color: #eee;
+    font-weight: bold;
+}

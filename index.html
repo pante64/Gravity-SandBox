@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="theBestUi">
+        <div id="ui">
+        <div id="Vel">
+               
+                    <h4>Y velocity</h6>
+ <h1 id="h2">0</h1>
+    <input id="velo" type="range" min="0" max="20" step="1"  value="0">
+        </div>
+       <div id="grav">
+     
+                <h4>Gravity</h6>
+                       <h1 id="h1">0.8</h1>
+    <input id="range" type="range" min="0.01" max="2" step="0.01"  value="0.8">
+
+       </div> 
+       <div id="horizontall">
+      
+                <h4>X velocity</h6>
+                  <h1 id="h3">0</h1>
+            <input id="horizontal" type="range" min="0" max="20" step="1"  value="0">
+
+
+       </div>
+       <div id="buttons">
+   <button id="btn">Start</button>
+       <button id="pause">Pause</button>
+       <button id="toggle">Trajectory</button>
+       <button id="guideBtn">Controls</button>
+       </div>
+
+    
+      
+
+
+    </div> 
+   <div id="forceUI">
+    <div id="forces"  class="simuoff">
+       
+        <div id="windd" class="bloque-fuerza">
+            <label class="titulo-fuerza">
+                <input type="checkbox" id="Windcheckbox"> Wind
+            </label>
+            <div class="control-rango">
+                <input id="windRange" type="range" min="1" max="20" step="1" value="5" class="alwaysallowed">
+                <span class="valor"  id="wvalue">5</span>
+            </div> 
+        </div>
+
+        <div id="pressure" class="bloque-fuerza">
+            <label class="titulo-fuerza">
+                <input type="checkbox" id="Presioncheckbox"> Pressure
+            </label>
+            <div class="control-rango">
+                <input id="pressureRange" type="range" min="1" max="20" step="1" value="5" class="alwaysallowed">
+                <span class="valor" id="pvalue">5</span>
+            </div> 
+        </div> 
+
+        <div id="air-resistance" class="bloque-fuerza">
+            <label class="titulo-fuerza">
+                <input type="checkbox" id="aircheckbox"> Air Resistance
+            </label>
+            <div class="control-rango">
+                <input id="airRange" type="range" min="1" max="20" step="1" value="5" class="alwaysallowed">
+                <span class="valor"  id="avalue">5</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    </div>
+    
+<div id="canvases"> 
+        <div id="texts">
+        <h4>VelocityX: <span id="velX"></span></h2>
+        <h4>VelocitY: <span id="velY"></span></h2>
+        <h4>Speed: <span id="speed"></span></h2>
+
+
+      </div> 
+<canvas id="drawing" width="1500" height="700"></canvas>
+    <canvas id="education"  width="1500" height="700"></canvas>
+
+</div>
+     
+   
+    
+
+    <div id="guidePopup">
+      <div id="guideBox">
+        <h1>Hey!</h1>
+        <p>Interact with the sliders to modify vertical and horizontal velocity, aswell as Gravity.</p>
+        <p>Press start to turn on the simulation, some UI elements become inaccesible while the simulation has started.</p>
+        <p>Press "Trajectory" to illustrate the current path of the object.</p>
+        <p>You can draw obstacles by dragging with your mouse around the screen.</p>
+        <p>You can drag the object by hovering over it, clicking and dragging around the screen.</p>
+        <p>If you mantain pressed shift while dragging the object you will be able to throw it!</p>
+        <p>Modify the forces on the top right to see how the object react to them!</p>
+
+        <button id="closeGuideBtn">Understood!</button>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
